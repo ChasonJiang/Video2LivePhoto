@@ -51,10 +51,10 @@ python video2livephoto.py -v video.mp4 -o output --image-format jpeg
 python video2livephoto.py -v video.mp4 -o output --duration 3.0
 
 # 自定义视频质量（CRF 模式，0-51，越小质量越高）
-python video2livephoto.py -v video.mp4 -o output --crf 18
+python video2livephoto.py -v video.mp4 -o output --crf 20
 
 # 自定义视频码率（Mbps）
-python video2livephoto.py -v video.mp4 -o output --bitrate 15 --maxrate 18
+python video2livephoto.py -v video.mp4 -o output --bitrate 10 --maxrate 10
 
 # 自定义输出文件名
 python video2livephoto.py -v video.mp4 -o output --name my_livephoto
