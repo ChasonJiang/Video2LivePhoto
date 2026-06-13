@@ -42,14 +42,14 @@ def build_parser() -> argparse.ArgumentParser:
                    help="timestamp (s) of the frame to grab when no image given")
     p.add_argument("--crf", "-crf", type=int, default=None,
                    help="video quality (lower=better, 0-51, default: None). ")
-    p.add_argument("--bitrate", "-bitrate", type=float, default=20.0,
-                   help="average video bitrate (Mbps, default: 20)")
-    p.add_argument("--maxrate", "-maxrate", type=float, default=20.0,
-                   help="maximum video bitrate (Mbps, default: 20)")
-    p.add_argument("--minrate", "-minrate", type=float, default=20.0,
-                   help="mimimum video bitrate (Mbps, default: 20)")
-    p.add_argument("--bufsize", "-bufsize", type=float, default=20.0,
-                   help="buffer size (Mbps, default: 20.0)")
+    p.add_argument("--bitrate", "-bitrate", type=float, default=10.0,
+                   help="average video bitrate (Mbps, default: 10)")
+    p.add_argument("--maxrate", "-maxrate", type=float, default=10.0,
+                   help="maximum video bitrate (Mbps, default: 10)")
+    p.add_argument("--minrate", "-minrate", type=float, default=10.0,
+                   help="mimimum video bitrate (Mbps, default: 10)")
+    p.add_argument("--bufsize", "-bufsize", type=float, default=10.0,
+                   help="buffer size (Mbps, default: 10.0)")
     p.add_argument("--name", default=None,
                    help="output basename (default: derived from the video)")
     p.add_argument("--verify", nargs=2, metavar=("STILL", "VIDEO"),
