@@ -113,6 +113,18 @@ python video2livephoto.py --verify photo.heic video.MOV
 - 使用 `--verify` 检查元数据是否完整
 
 
+### TIP
+- 如果你的视频小于（大于）60fps，并且你希望使倍速来补偿动态壁纸慢放，那么你可以使用ffmpeg运行如下命令：
+```
+ffmpeg -i input.mp4 -vf "setpts=(1/倍数)*PTS,fps=目标帧率" -c:v libx264 output.mp4
+
+# 例如：
+# 原始120fps ➔ 4倍速,目标60fps
+ffmpeg -i input.mp4 -vf "setpts=0.25*PTS,fps=60" -c:v libx264 -an output_60fps.mp4
+# 原始30fps ➔ 4倍速，目标60fps
+ffmpeg -i input.mp4 -vf "setpts=0.25*PTS,fps=60" -c:v libx264 -an output_60fps.mp4
+```
+
 ## 技术细节
 
 ### Live Photo 结构
