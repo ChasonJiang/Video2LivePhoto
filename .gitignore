@@ -1,0 +1,6 @@
+assets
+*.pyc
+*.pyo
+.vscode
+test.py
+output
