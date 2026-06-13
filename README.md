@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ### FFmpeg
 
-需要安装 FFmpeg（包含 libx264/libx265 编码器）。程序会自动检测系统 PATH 中的 ffmpeg/ffprobe，或使用 imageio-ffmpeg 提供的版本。
+需要下载 FFmpeg（包含 libx264/libx265 编码器）并添加到系统环境变量PATH中。程序会自动检测系统环境变量PATH中的 ffmpeg/ffprobe，或使用 imageio-ffmpeg 提供的版本。
 
 **Windows 用户**：推荐从 [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) 下载完整版 FFmpeg。
 
